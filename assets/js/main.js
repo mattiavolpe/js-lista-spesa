@@ -10,4 +10,32 @@ Ricordiamoci di incrementare il contatore, o comunque di inserire una condizione
 */
 
 // CREATE THE SHOPPING LIST ARRAY
-const shoppingList = ["acqua", "pane", "farina", "birra", "mozzarella", "pasta", "bresaola", "petto di pollo", "pesce spada", "uova", "cioccolato fondente", "frollini al cacao"];
+const shoppingList = ["Acqua", "Pane", "Farina", "Birra", "Mozzarella", "Pasta", "Bresaola", "Petto di pollo", "Pesce spada", "Uova", "Cioccolato fondente", "Frollini al cacao"];
+
+// SELECT THE CONTAINER FROM THE DOM
+const container = document.querySelector(".container");
+
+// CREATE THE UL AND INSERT IT INTO THE CONTAINER
+const ulElement = document.createElement("ul");
+container.append(ulElement);
+
+// CYCLE THROUGH THE SHOPPING LIST TO PRINT ITS ELEMENTS ON THE PAGE
+
+// CREATE THE COUNTER VARIABLE
+let i = 0;
+
+// CYCLE UNTIL THE COUNTER IS LESS THAN THE SHOPPING LIST LENGTH
+while (i < shoppingList.length) {
+
+  // CREATE THE LI
+  const liElement = document.createElement("li");
+
+  // SET IT'S CONTENT
+  liElement.innerText = shoppingList[i];
+
+  // INSERT AT THE END OF THE UL
+  ulElement.append(liElement);
+  
+  // INCREASE THE COUNTER
+  i++;
+}
